@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DigitalMart11</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DigitalMart11.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="logo.png" alt="DigitalMart Logo">
+                <span>DigitalMart</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#Partners">Our Trusted Partners</a></li>
+                <li><a href="#Reviews">Reviews</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+            </ul>
+            <a href="login1.html" class="login-btn">Login</a>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__title">DigitalMart</p>
+        <h3>Social Media Links</h3>
+        <br></br>
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- Social Media Links -->
+        <div class="footer__social">
+            <a href="https://www.facebook.com/profile.php?id=100018349476436&mibextid=ZbWKwL" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/mohammad_alsharef1?igsh=MWQzdG41b2wzMjgx" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B4%D8%B1%D9%8A%D9%81-67091619b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/yourusername" class="footer__icon"><i class='bx bxl-github'></i></a>
+        </div>
+        <br></br>
+        <!-- E-commerce Links -->
+        <h3>Popular E-commerce Sites</h3>
+        <div class="footer__ecommerce">
+            <a href="https://www.amazon.com" target="_blank" class="footer__icon">Amazon</a> |
+            <a href="https://www.ebay.com" target="_blank" class="footer__icon">eBay</a> |
+            <a href="https://www.aliexpress.com" target="_blank" class="footer__icon">AliExpress</a> |
+            <a href="https://www.walmart.com" target="_blank" class="footer__icon">Walmart</a> |
+            <a href="https://www.etsy.com" target="_blank" class="footer__icon">Etsy</a> |
+            <a href="https://www.target.com" target="_blank" class="footer__icon">Target</a> |
+            <a href="https://www.newegg.com" target="_blank" class="footer__icon">Newegg</a> |
+            <a href="https://www.shopify.com" target="_blank" class="footer__icon">Shopify</a> |
+            <a href="https://www.rakuten.com" target="_blank" class="footer__icon">Rakuten</a> |
+            <a href="https://www.bestbuy.com" target="_blank" class="footer__icon">Best Buy</a>
+        </div>
+
+        <p>DigitalMart / All rights reserved 2024</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/dashbord.css">
+    <link rel="stylesheet" href="~/js/dashobrd.js">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>DigitalMart</h2>
+            <div class="menu-container">
+                <ul class="icon-list">
+                    <li><i class="fas fa-tachometer-alt"></i></li> <!-- Dashboard -->
+                    <li><i class="fas fa-home"></i></li> <!-- Home -->
+                    <li><i class="fas fa-info-circle"></i></li> <!-- About Us -->
+                    <li><i class="fas fa-list"></i></li> <!-- Categories -->
+                    <li><i class="fas fa-star"></i></li> <!-- Reviews -->
+                </ul>
+                <ul class="text-list">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" style="flex-grow: 1; padding: 20px;">
+            <!-- Top Section -->
+            <div class="top-section">
+                <h1>Product Manager</h1>
+                <div class="buttons">
+                    <button class="create-btn" id="openModal">Add new product</button>
+                </div>
+            </div>
+
+            <!-- Info Cards -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <h2>Total Product</h2>
+                    <p id="event-count">0</p>
+                    <span>Total events in the system</span>
+                </div>
+                <div class="info-card" id="latest-review-card">
+                    <h2>Latest Review</h2>
+                    <p id="latest-review-name">No recent reviews</p>
+                    <span id="latest-review-date"></span>
+                </div>
+                <div class="info-card">
+                    <h2>Total Products Reviewed</h2>
+                    <p>150</p>
+                    <span>Since last update</span>
+                </div>
+                <div class="info-card">
+                    <h2>Average Rating</h2>
+                    <p>4.5</p>
+                    <span>Based on user feedback</span>
+                </div>
+            </div>
+
+            <!-- Event List -->
+            <div class="event-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Number</th>
+                            <th>Product Name</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Price (Amazon)</th>
+                            <th>Link (Amazon)</th>
+                            <th>Price (Alibaba)</th>
+                            <th>Link (Alibaba)</th>
+                            <th>Price (AliExpress)</th>
+                            <th>Link (AliExpress)</th>
+                            <th>Price (Shein)</th>
+                            <th>Link (Shein)</th>
+                            <th>Price (Noon)</th>
+                            <th>Link (Noon)</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div class="modal" id="addProductModal" aria-hidden="true" role="dialog">
+        <h3>Add New Product</h3>
+        <form id="addProductForm">
+            <input type="file" id="productImage" accept="image/*">
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="text" id="productDescription" placeholder="Description">
+            <input type="text" id="amazonPrice" placeholder="Amazon Price">
+            <input type="text" id="amazonLink" placeholder="Amazon Link">
+            <input type="text" id="AlibabaPrice" placeholder="Alibaba Price">
+            <input type="text" id="AlibabaLink" placeholder="Alibaba Link">
+            <input type="text" id="AliExpressPrice" placeholder="AliExpress Price">
+            <input type="text" id="AliExpressLink" placeholder="AliExpress Link">
+            <input type="text" id="SheinPrice" placeholder="Shein Price">
+            <input type="text" id="SheinLink" placeholder="Shein Link">
+            <input type="text" id="NoonPrice" placeholder="Noon Price">
+            <input type="text" id="NoonLink" placeholder="Noon Link">
+            <!-- Add fields for other platforms if needed -->
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+   
+</body>
+</html>

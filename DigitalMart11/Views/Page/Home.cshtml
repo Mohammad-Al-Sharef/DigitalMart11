@@ -1,0 +1,174 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalMart</title>
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+<body>
+
+
+    
+    <!-- Banner Section with Background Video -->
+    <header class="banner">
+        <video autoplay muted loop>
+            <source src="Galaxy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="banner-content">
+            <h1>DigitalMart</h1>
+            <p>Welcome to DigitalMart ......</p>
+            <p> your trusted site for comprehensive reviews of the latest electronics.</p>
+            <a href="#categories" class="explore-btn">Explore Now</a>
+
+        </div>
+    </header>
+
+    <section class="about section" id="about">
+        <h2 class="section-title">About Us</h2>
+
+        <div class="about__container bd-grid">
+            <div class="about__img">
+                <img src="logo.png" alt="">
+            </div>
+
+            <div class="about__text">
+                <h2 class="about__subtitle">DigitalMart</h2>
+                <p class="about__text">
+                    Welcome to DigitalMart, your trusted source for in-depth reviews of the latest electronic products, including mobile phones, computers, and accessories. Our goal is to provide you with comprehensive and unbiased reviews to help you make informed decisions when purchasing electronics.
+
+                    We also simplify the shopping experience by offering direct links to top online retailers like Amazon, Shein, and AliExpress. When you purchase through these links, we earn a small commission, allowing us to continue delivering high-quality content without any additional cost to you.
+
+                    At DigitalMart, we are committed to offering reliable product insights and deals, ensuring that your next purchase is the right one. Thank you for trusting us as your go-to platform for all things tech!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="line-separator"></div>
+
+    <section class="categories-section" id="categories">
+        <h2 class="section-title">Categories</h2>
+        <div class="categories-container">
+            <!-- Category Card 1 -->
+            <div class="category-card">
+                <img src="p1.jpg" alt="Computer & Laptop">
+                <div class="category-content">
+                    <h3>Computer & laptop</h3>
+                    <p>We provide you with comprehensive reviews of the latest computers and laptops, focusing on performance, battery, design, and technical features.</p>
+                    <button class="read-btn">Shop Now</button>
+                </div>
+            </div>
+            <!-- Category Card 2 -->
+            <div class="category-card">
+                <img src="ppp.jpg" alt="Printers & Cameras">
+                <div class="category-content">
+                    <h3>Printers & Cameras</h3>
+                    <p>Explore top printers and cameras for all needs, from home to professional use. Our reviews help you find the perfect device, whether for high-quality prints or stunning photography</p>
+                    <button class="read-btn">Shop Now</button>
+                </div>
+            </div>
+            <!-- Category Card 3 -->
+            <div class="category-card">
+                <img src="p2.jpg" alt="Smartphones">
+                <div class="category-content">
+                    <h3>Smartphones</h3>
+                    <p>We cover the latest smartphones from all the popular brands, with in-depth analysis of performance, camera, display, and battery.</p>
+                    <button class="read-btn">Shop Now</button>
+                </div>
+            </div>
+            <!-- Category Card 4 -->
+            <div class="category-card">
+                <img src="ss.jpg" alt="Accessories">
+                <div class="category-content">
+                    <h3>Accessories</h3>
+                    <p>From chargers and cables to cases and headphones, we bring you reviews of the best accessories that enhance your electronics experience.</p>
+                    <button class="read-btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="line-separator"></div>
+    <section class="partners-section" id="Partners">
+        <h2>Our Trusted Partners</h2>
+        <div class="partners">
+
+            <div class="partner">
+                <a href="https://www.noon.com" target="_blank"><img src="a5.jpg" alt="Noon Logo"></a>
+            </div>
+
+            <div class="partner">
+                <a href="https://www.shein.com" target="_blank"><img src="a2.jpg" alt="Shein Logo"></a>
+            </div>
+
+            <div class="partner">
+                <a href="https://www.amazon.com" target="_blank"><img src="a3.jpg" alt="Amazon Logo"></a>
+            </div>
+
+            <div class="partner">
+                <a href="https://www.aliexpress.com" target="_blank"><img src="a4.jpg" alt="AliExpress Logo"></a>
+            </div>
+
+            <div class="partner">
+                <a href="https://www.alibaba.com" target="_blank"><img src="a1.jpg" alt="Alibaba Logo"></a>
+            </div>
+
+    </section>
+
+    <div class="line-separator"></div>
+
+    <section class="contact section" id="Contact">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact__container bd-grid">
+            <form action="https://getform.io/f/4ece6f5c-e9c3-41bb-94db-12156ab4bedd" method="POST" class="contact__form">
+                <input type="text" placeholder="Name" name="name" class="contact__input">
+                <input type="mail" placeholder="Email" name="email" class="contact__input">
+                <textarea cols="0" rows="10" name="message" class="contact__input"></textarea>
+                <input type="submit" value="send" class="contact__button button">
+            </form>
+        </div>
+    </section>
+
+    
+
+
+    <script>
+
+
+
+           document.querySelector('.explore-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#categories').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+            // Categories
+
+            // Optional - Add interactive functionality here if needed.
+        document.querySelectorAll('.read-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('You clicked Read!');
+            });
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const categoryCards = document.querySelectorAll('.category-card');
+
+            categoryCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('show'); // Add the 'show' class to trigger animation
+                }, index * 300); // Delay each card's animation by 300ms
+            });
+        });
+
+
+    </script>
+</body>
+</html>
